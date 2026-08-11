@@ -1,0 +1,65 @@
+:root {
+  --background: #f5f5f5;
+  --paper: #ffffff;
+  --heading: #2d2d2d;
+  --text: #545454;
+  --muted: #777777;
+  --light: #999999;
+  --line: #e8e8e8;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--text); background: var(--background); font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: #505050; text-decoration: none; }
+a:hover { color: #000; text-decoration: underline; }
+.main-wrapper { padding: 48px 24px; }
+.resume-wrapper { width: min(100%, 1000px); margin: 0 auto; padding: 48px; background: var(--paper); border-radius: 4px; box-shadow: 0 1rem 3rem rgba(0,0,0,.15); }
+.resume-header { display: grid; grid-template-columns: minmax(0,3fr) minmax(230px,1fr); gap: 32px; align-items: center; }
+.resume-title h1 { margin: 0; color: var(--heading); font-size: 2.2rem; font-weight: 900; letter-spacing: .05em; line-height: 1.2; }
+.resume-title p { margin: 6px 0 0; color: #6c757d; font-size: 1.05rem; font-weight: 300; line-height: 1.5; }
+.resume-contact { color: #6c757d; font-size: .85rem; font-style: normal; }
+.resume-contact ul { display: grid; gap: 7px; padding: 0; margin: 0; list-style: none; }
+.resume-contact li { display: grid; grid-template-columns: 20px 1fr; gap: 7px; align-items: baseline; }
+.resume-contact li span { color: #aab0b6; font-size: .72rem; text-align: center; }
+hr { margin: 20px 0; border: 0; border-top: 1px solid var(--line); }
+.resume-intro { display: grid; grid-template-columns: 140px 1fr; gap: 32px; align-items: center; padding: 4px 0; }
+.profile-image { display: block; width: 140px; height: 140px; overflow: hidden; background: #ececec; border-radius: 50%; object-fit: cover; object-position: center 18%; }
+.resume-intro p { margin: 0; font-size: .92rem; line-height: 1.7; }
+.resume-body { display: grid; grid-template-columns: minmax(0,3fr) minmax(220px,1fr); gap: 48px; }
+.resume-main, .resume-aside { display: grid; align-content: start; gap: 28px; }
+.resume-main > section, .resume-aside > section { padding-top: 4px; }
+h2 { margin: 0 0 24px; padding-bottom: 9px; color: var(--heading); border-bottom: 2px solid var(--line); font-size: 1.05rem; font-weight: 700; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
+.item { margin-bottom: 24px; }
+.item-heading { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: baseline; }
+.item-heading h3, .year, .side-item h3 { margin: 0; color: var(--heading); font-size: 1rem; font-weight: 600; line-height: 1.45; }
+.item-heading span { color: var(--light); font-size: .8rem; text-align: right; }
+.item ul { padding-left: 19px; margin: 5px 0 0; font-size: .9rem; }
+.project-group { margin-bottom: 20px; }
+.project-group .year { margin-bottom: 9px; }
+.project-title { color: #505050; font-size: .92rem; font-weight: 600; }
+.project-group p { margin: 4px 0 0; color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.project-group .project-meta { color: var(--light); font-size: .78rem; font-style: italic; }
+.resume-aside { padding-left: 6px; }
+.resume-aside h2 { font-size: .95rem; }
+.resume-aside section { padding-bottom: 22px; border-bottom: 1px solid #f0f0f0; }
+.resume-aside section:last-child { border-bottom: 0; }
+.side-item p { margin: 3px 0 0; color: var(--muted); font-size: .8rem; }
+.resume-aside ul { display: grid; gap: 6px; padding: 0; margin: 0; list-style: none; font-size: .86rem; }
+
+@media (max-width: 760px) {
+  .main-wrapper { padding: 20px 12px; }
+  .resume-wrapper { padding: 24px; }
+  .resume-header, .resume-body { grid-template-columns: 1fr; }
+  .resume-header { gap: 24px; }
+  .resume-title h1 { font-size: 1.7rem; }
+  .resume-contact ul { grid-template-columns: 1fr 1fr; }
+  .resume-intro { grid-template-columns: 1fr; text-align: center; }
+  .profile-image { width: 105px; height: 105px; margin: 0 auto; }
+  .resume-intro p { text-align: left; }
+  .resume-body { gap: 28px; }
+  .resume-aside { padding-top: 28px; padding-left: 0; border-top: 1px solid var(--line); }
+  .item-heading { grid-template-columns: 1fr; gap: 2px; }
+  .item-heading span { text-align: left; }
+}
+
+@media (max-width: 460px) { .resume-contact ul { grid-template-columns: 1fr; } }
